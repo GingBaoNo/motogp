@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <div class="header" th:fragment="header">
+    <ul id="nav">
+      <li>
+        <a href="/">
+          <img src="assets/img/logo.jpg" class="logo" alt="Logo" />
+        </a>
+      </li>
+      <li><a href="/calendar.html">Calendar</a></li>
+      <li>
+        <a href="#">Results & Standings</a>
+        <ul class="subnav1">
+          <li><a href="/results.html">Results</a></li>
+          <li><a href="/standing.html">Standings</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Riders & Teams</a>
+        <ul class="subnav2">
+          <li><a href="/riders">Riders</a></li>
+          <li><a href="/teams">Teams</a></li>
+        </ul>
+      </li>
+      <div class="login">
+        <li><a href="login.html">Login | Sign up</a></li>
+      </div>
+    </ul>
+  </div>
+</html>

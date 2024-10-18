@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./assets/themify-icons-font/themify-icons/themify-icons.css"
+    />
+    <link rel="stylesheet" href="./assets/css/riders.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div th:replace="~{home/fragments/header :: header}"></div>
+      <div th:replace="~{riderteam/fragments/slider :: slider}"></div>
+
+      <div class="content">
+        <div class="news">
+          <div class="image"></div>
+          <span>Official</span>
+        </div>
+
+        <div class="place-list">
+          <div th:each="rider : ${riders}" class="rider-card">
+            <img
+              th:src="@{'/img_rider/' + ${rider.imgUrl}}"
+              alt="${rider.country}"
+              class="riders-img"
+            />
+            <span class="id-rider">
+              #<span
+                th:text="${#strings.toUpperCase(rider.name.substring(0, 1)) + #strings.toUpperCase(rider.name.substring(rider.name.indexOf(' ') + 1, rider.name.indexOf(' ') + 2)) + rider.riderNumber}"
+              ></span>
+            </span>
+            <div class="rider-list__info-name">
+              <span th:text="${rider.name}"></span>
+            </div>
+            <div class="country">
+              <img
+                th:src="@{'/flag_svg/' + ${rider.country_img}}"
+                alt=""
+                class="card-flag-country"
+              />
+              <span class="name-country" th:text="${rider.country}"></span>
+              <span
+                class="rider-list__details-team"
+                th:text="${rider.team.teamName}"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div th:replace="~{home/fragments/footer :: footer}"></div>
+    </div>
+  </body>
+</html>

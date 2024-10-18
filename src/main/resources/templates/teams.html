@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teams</title>
+    <link
+      rel="stylesheet"
+      href="./assets/themify-icons-font/themify-icons/themify-icons.css"
+    />
+    <link rel="stylesheet" href="./assets/css/teams.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div th:replace="~{home/fragments/header :: header}"></div>
+
+      <div th:replace="~{riderteam/fragments/slider :: slider}"></div>
+
+      <div class="content">
+        <div class="news">
+          <div class="image"></div>
+          <span>Official</span>
+        </div>
+
+        <div class="row place-list">
+          <div class="rider-card" th:each="team : ${teams}">
+            <img
+              th:src="@{'/img_team/' + ${team.team_img}}"
+              alt=""
+              class="riders-img"
+            />
+            <h3 class="id-rider" th:text="${team.teamName}"></h3>
+            <div class="rider-list__info-name">
+              <div
+                th:each="rider : ${team.riders}"
+                th:text="${rider.name}"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div th:replace="~{home/fragments/footer :: footer}"></div>
+    </div>
+  </body>
+</html>
