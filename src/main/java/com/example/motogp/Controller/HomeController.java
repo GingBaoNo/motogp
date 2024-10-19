@@ -39,5 +39,4 @@ public class HomeController {
     public String standing(){
         return "standing";
     }
-
 }
