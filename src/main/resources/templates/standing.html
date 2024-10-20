@@ -10,11 +10,8 @@
     />
     <link rel="stylesheet" href="./assets/css/standing.css" />
   </head>
-
   <body>
     <div th:replace="~{home/fragments/header :: header}"></div>
-    <div class="sub-header"></div>
-    <!-- cai nay cua chong t giu nguyen nhe -->
     <div class="result">
       <div class="results__container">
         <div class="primary-filter">
@@ -89,22 +86,13 @@
               class="results__hero-image-img js-hero-image active"
             />
           </div>
-          <div class="results__hero-text">
-            Gran Premio Red Bull di San Marino e della Riviera di Rimini 2024
-          </div>
+          <div class="results__hero-text">Championship Standings 2024</div>
           <div class="results__hero-details-container">
-            <img
-              src="https://static-files.motogp.pulselive.com/assets/flags/sm.svg"
-              alt="SM flag"
-              class="results__hero-details-flag"
-            />
-            <div class="results__hero-details-location">
-              Misano World Circuit Marco Simoncelli
-            </div>
-            <div class="results__hero-details-dates">6 - 09 Sep</div>
+            <label for="event-details" class="results__hero-details-label"
+              >Select Event Details:</label
+            >
           </div>
         </div>
-        <!-- ... -->
 
         <section class="standings-table">
           <div class="standings-table__table-wrapper">
@@ -116,7 +104,6 @@
                   >
                     pos.
                   </th>
-                  <!-- <th class="results-table__header-cell results-table__header-cell--points ">pts</th> -->
                   <th
                     class="results-table__header-cell results-table__header-cell--rider"
                   >
@@ -142,8 +129,6 @@
                   >
                     1
                   </td>
-                  <!----thay màu ở ben goc trai o day-->
-                  <!-- <td class="results-table__body-cell results-table__body-cell--points ">20</td> -->
                   <td
                     class="results-table__body-cell results-table__body-cell--rider"
                   >
@@ -162,8 +147,8 @@
                         <div class="results-table__rider-name">
                           <span
                             class="results-table__body-cell results-table__body-cell--number"
-                            >89
-                          </span>
+                            >89</span
+                          >
                           <span
                             class="results-table__body-cell results-table__body-cell--full-name"
                           >
@@ -186,7 +171,7 @@
                         alt="ES flag"
                         class="results-table__body-cell-flag"
                       />
-                      <span>Prima Pramac Racing </span>
+                      <span>Prima Pramac Racing</span>
                     </div>
                   </td>
                   <td
@@ -195,7 +180,6 @@
                     <span>392</span>
                   </td>
                 </tr>
-
                 <tr class="results-table__body-row">
                   <td
                     class="results-table__body-cell results-table__body-cell--pos"
@@ -203,7 +187,6 @@
                   >
                     2
                   </td>
-                  <!-- <td class="results-table__body-cell results-table__body-cell--points ">25</td> -->
                   <td
                     class="results-table__body-cell results-table__body-cell--rider"
                   >
@@ -222,8 +205,8 @@
                         <div class="results-table__rider-name">
                           <span
                             class="results-table__body-cell results-table__body-cell--number"
-                            >1
-                          </span>
+                            >1</span
+                          >
                           <span
                             class="results-table__body-cell results-table__body-cell--full-name"
                           >
@@ -246,7 +229,7 @@
                         alt="ES flag"
                         class="results-table__body-cell-flag"
                       />
-                      <span>Ducati Lenovo Team </span>
+                      <span>Ducati Lenovo Team</span>
                     </div>
                   </td>
                   <td
@@ -259,10 +242,6 @@
             </table>
           </div>
         </section>
-
-        <div class="error-container"></div>
-
-        <div class="loading-indicator"></div>
 
         <div th:replace="~{home/fragments/footer :: footer}"></div>
       </div>
