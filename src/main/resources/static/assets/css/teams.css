@@ -93,7 +93,7 @@ html {
 .slider {
   background-color: #ccc;
   width: 100%;
-  height: 250px;
+  height: -32px;
   margin-top: 97px;
 }
 .slider .rider-container {
@@ -138,16 +138,6 @@ html {
 .slider .rider-list li:hover a {
   background-color: aqua;
   color: #ff6a00;
-}
-
-.slider .leader-board {
-  background-image: url(https://adsx.motogp.com/2024_Videopass/Asian%20Drop/LDB/MGP_2024_VP_Asian-Drop_Banner_LDB_728x100.gif);
-  height: 100px;
-  margin-top: 14px;
-  background-repeat: no-repeat;
-  background-position: center;
-  max-width: 100%;
-  cursor: pointer;
 }
 
 .content {

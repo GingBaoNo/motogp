@@ -6,8 +6,10 @@ html {
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
+.main {
+}
 .header {
-  height: auto;
+  height: 60px;
   background-color: #000;
   position: fixed;
 
@@ -23,7 +25,7 @@ html {
   justify-content: space-between;
 }
 .caledar {
-  margin-right: auto;
+  margin-right: 30%;
 }
 .calendar li a {
   color: #fff;
@@ -68,8 +70,8 @@ html {
 }
 
 .logo {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 50px;
 }
 #nav li:hover .subnav1,
 #nav li:hover .subnav2 {
@@ -102,7 +104,7 @@ html {
   width: 100%;
 }
 .slider {
-  /* position: relative; */
+  position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://resources.motogp.pulselive.com/photo-resources/2024/09/09/375bd167-7c14-45e6-8fa8-9a5fd344fe34/report-MSN-TEST.jpg?width=1440&height=810");
   height: 100%;
@@ -112,6 +114,7 @@ html {
   background-position: top center;
   background-size: cover;
 }
+
 #calendar-container {
   margin-top: 130px;
 }
@@ -119,7 +122,7 @@ html {
   margin-top: -20px;
 }
 .sub-header {
-  height: 40px;
+  height: 60px;
   background-color: #814c4c;
   margin-top: 55px;
   /* background: linear-gradient( rgba(148, 18, 18, 0), rgba(97, 49, 49, 0), rgba(48, 35, 35, 0.8)); */

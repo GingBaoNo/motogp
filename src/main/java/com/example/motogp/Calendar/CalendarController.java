@@ -1,4 +1,4 @@
-package com.example.motogp.Controller;
+package com.example.motogp.Calendar;
 
 import java.util.List;
 import java.util.Map;
@@ -11,9 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.example.motogp.Calendar.Calendar; // Cập nhật import
-import com.example.motogp.Service.CalendarService;
 
 import jakarta.annotation.PostConstruct;
 
@@ -28,7 +25,7 @@ public class CalendarController implements ErrorController {
     public void init() {
         // Hiển thị dữ liệu lịch ra terminal
         calendarService.getAllCalendars().forEach(calendar -> {
-            System.out.println("Calendar ID: " + calendar.getId() + ", Name: " + calendar.getEventName() + ", Start Date: " + calendar.getStartDate());
+            System.out.println("Calendar ID: " + calendar.getId() + ", Name: " + calendar.getEventName() + ", Start Date: " + calendar.getStartDate() +", image link: " + calendar.getImg_link());
         });
     }
 

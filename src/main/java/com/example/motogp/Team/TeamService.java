@@ -1,10 +1,7 @@
-package com.example.motogp.Service;
+package com.example.motogp.Team;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.example.motogp.Team.Team;
-import com.example.motogp.Team.TeamRepository;
 
 import java.util.List;
 import java.util.Optional;

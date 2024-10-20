@@ -4,10 +4,8 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 100%;
+  /* font-size: 100%; */
   font-family: Arial, Helvetica, sans-serif;
-}
-.main {
 }
 
 .header {
@@ -23,7 +21,6 @@ html {
 #nav {
   display: flex; /* Flexbox để căn ngang các phần tử */
   align-items: center; /* Căn giữa các phần tử theo chiều dọc */
-  justify-slider: space-between;
 }
 .login {
   margin-left: auto; /* Đẩy phần tử login ra bên phải */
@@ -95,7 +92,7 @@ html {
 .slider {
   background-color: #ccc;
   width: 100%;
-  height: 250px;
+  height: -32px;
   margin-top: 97px;
 }
 .slider .rider-container {
@@ -140,16 +137,6 @@ html {
 .slider .rider-list li:hover a {
   background-color: aqua;
   color: #ff6a00;
-}
-
-.slider .leader-board {
-  background-image: url(https://adsx.motogp.com/2024_Videopass/Asian%20Drop/LDB/MGP_2024_VP_Asian-Drop_Banner_LDB_728x100.gif);
-  height: 100px;
-  margin-top: 14px;
-  background-repeat: no-repeat;
-  background-position: center;
-  max-width: 100%;
-  cursor: pointer;
 }
 
 .content {
@@ -219,39 +206,22 @@ html {
 }
 .place-list .id-rider {
   padding: 15px 30px 0 30px;
-  font-size: 20px;
+  font-size: 30px;
   display: block;
+  line-height: 1;
+  color: #fff;
 }
 .place-list .rider-list__info-name {
-  font-family: var(--g-typography-display);
-  font-size: 30px;
-  padding-left: 30px;
-  padding-bottom: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 0 30px 30px;
   display: inline-block;
 }
 
-.place-list .country {
-  display: absolute;
-  font-size: 15px;
-  padding-left: 30px;
-  margin-top: -30px;
-  margin-bottom: 20px;
-  color: #999;
-  font-weight: 500;
+.place-list .rider-name {
+  padding: 5px 0;
 }
 
-.place-list .card-flag-country {
-  width: 27px; /* Chiều rộng hình ảnh */
-  height: 20.25px; /* Chiều cao hình ảnh */
-  object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
-}
-.name-country {
-  padding-left: 3px;
-  padding-right: 5px;
-}
-.rider-list__details-team {
-  padding-left: 5px;
-}
 /* footer */
 #footer {
   padding: 64px 16px;
@@ -275,14 +245,4 @@ html {
 }
 #footer .copy-right a {
   color: rgba(0, 0, 0, 0.4);
-}
-
-.id-rider {
-  font-size: 1em; /* Hoặc kích thước chữ bạn muốn */
-}
-
-.initial,
-.number {
-  margin: -1; /* Đảm bảo không có khoảng cách */
-  display: inline; /* Hiển thị trên cùng một dòng */
 }

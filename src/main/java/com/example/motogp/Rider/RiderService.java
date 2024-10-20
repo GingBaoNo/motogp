@@ -1,10 +1,7 @@
-package com.example.motogp.Service;
+package com.example.motogp.Rider;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.example.motogp.Rider.Rider;
-import com.example.motogp.Rider.RiderRepository;
 
 import java.util.List;
 import java.util.Optional;
