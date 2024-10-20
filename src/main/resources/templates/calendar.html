@@ -18,15 +18,14 @@
         <li><a href="">2024 CALENDAR</a></li>
       </ul>
     </div>
-
     <div class="calendar-container">
-      <div th:each="calendar : ${calendars}" class="month">
-        <h2 th:text="'# ' + #dates.format(calendar.startDate, 'MMMM')"></h2>
-        <div class="event">
+      <div th:each="entry : ${calendarsByMonth}" class="month">
+        <h2 th:text="'# ' + ${entry.key}"></h2>
+        <div th:each="calendar : ${entry.value}" class="event">
           <div class="overlay"></div>
           <div
             class="date"
-            th:text="@{${T(com.example.util.DateUtil).formatDateRange(calendar.startDate, calendar.endDate)}}"
+            th:text="${dateUtil.formatDateRange(calendar.startDate, calendar.endDate)}"
           ></div>
           <h3 th:text="${calendar.eventName}"></h3>
           <p>
@@ -35,12 +34,12 @@
           </p>
           <img
             class="calendar-img"
-            th:src="${calendar.img_link}"
+            th:src="@{'/img_event/' + ${calendar.img_link}}"
             th:alt="'Image for ' + ${calendar.eventName}"
           />
           <img
             class="calendar-listing__layout"
-            th:src="${calendar.circuit.imageLink}"
+            th:src="@{'/img_circuit/' + ${calendar.circuit.imageLink}}"
             th:alt="${calendar.circuit.name + ' track'}"
             loading="lazy"
           />

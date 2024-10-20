@@ -59,6 +59,69 @@ public class Calendar {
                 + ", circuit=" + circuit + ", sponsor=" + sponsor + ", img_link=" + img_link + "]";
     }
 
+    
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((id == null) ? 0 : id.hashCode());
+        result = prime * result + ((eventName == null) ? 0 : eventName.hashCode());
+        result = prime * result + ((startDate == null) ? 0 : startDate.hashCode());
+        result = prime * result + ((endDate == null) ? 0 : endDate.hashCode());
+        result = prime * result + ((circuit == null) ? 0 : circuit.hashCode());
+        result = prime * result + ((sponsor == null) ? 0 : sponsor.hashCode());
+        result = prime * result + ((img_link == null) ? 0 : img_link.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Calendar other = (Calendar) obj;
+        if (id == null) {
+            if (other.id != null)
+                return false;
+        } else if (!id.equals(other.id))
+            return false;
+        if (eventName == null) {
+            if (other.eventName != null)
+                return false;
+        } else if (!eventName.equals(other.eventName))
+            return false;
+        if (startDate == null) {
+            if (other.startDate != null)
+                return false;
+        } else if (!startDate.equals(other.startDate))
+            return false;
+        if (endDate == null) {
+            if (other.endDate != null)
+                return false;
+        } else if (!endDate.equals(other.endDate))
+            return false;
+        if (circuit == null) {
+            if (other.circuit != null)
+                return false;
+        } else if (!circuit.equals(other.circuit))
+            return false;
+        if (sponsor == null) {
+            if (other.sponsor != null)
+                return false;
+        } else if (!sponsor.equals(other.sponsor))
+            return false;
+        if (img_link == null) {
+            if (other.img_link != null)
+                return false;
+        } else if (!img_link.equals(other.img_link))
+            return false;
+        return true;
+    }
+
     // Getters and Setters
     public Integer getId() {
         return id;
