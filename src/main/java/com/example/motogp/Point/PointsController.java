@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import jakarta.annotation.PostConstruct;
 
 @Controller
-@RequestMapping("/points")
+@RequestMapping("/")
 public class PointsController implements ErrorController {
 
     @Autowired
