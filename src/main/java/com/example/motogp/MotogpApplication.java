@@ -8,5 +8,4 @@ public class MotogpApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MotogpApplication.class, args);
 	}
-
 }
