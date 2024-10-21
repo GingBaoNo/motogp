@@ -2,17 +2,16 @@
   padding: 0;
   margin: 0;
 }
+
 html {
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
-.main {
-}
+
 .header {
   height: 60px;
   background-color: #000;
   position: fixed;
-
   top: 0;
   left: 0;
   right: 0;
@@ -20,51 +19,29 @@ html {
 }
 
 #nav {
-  display: flex; /* Flexbox để căn ngang các phần tử */
-  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
-.caledar {
-  margin-right: 30%;
-}
-.calendar li a {
-  color: #fff;
-}
-.login {
-  margin-left: auto; /* Đẩy phần tử login ra bên phải */
-}
-.login li a {
-  color: #fff;
-}
+
 #nav li {
   display: inline-block;
-  list-style-type: none; /* Loại bỏ ký hiệu bullet nếu có */
+  list-style-type: none;
   position: relative;
 }
+
 #nav > li > a {
   color: #fff;
   padding: 0 25px;
   line-height: 40px;
-}
-#nav li a {
   text-decoration: none;
   line-height: 60px;
   display: inline-block;
   padding: 0 30px;
-  border-radius: 10px; /*bo tròn lại*/
-}
-.calendar:hover {
   border-radius: 10px;
 }
-.login:hover {
-  border-radius: 10px;
-}
-#nav > li:hover > a,
-.calendar:hover a {
-  color: #fff;
-  background-color: rgb(206, 29, 29);
-}
-.login:hover a {
+
+#nav > li:hover > a {
   color: #fff;
   background-color: rgb(206, 29, 29);
 }
@@ -73,36 +50,7 @@ html {
   height: 40px;
   width: 50px;
 }
-#nav li:hover .subnav1,
-#nav li:hover .subnav2 {
-  display: block;
-  overflow: hidden; /* Ẩn phần thừa */
-}
-#nav .subnav1 a,
-#nav .subnav2 a {
-  width: 100%;
-  color: #000;
-  /* padding: 0 12px; */
-  line-height: 50px;
-}
-#nav .subnav1,
-#nav .subnav2 {
-  top: 100%;
-  left: 0;
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
 
-#nav .subnav1 li:hover,
-#nav .subnav2 li:hover {
-  width: 100%;
-  color: #fff;
-  background-color: rgb(206, 29, 29);
-  height: 100%;
-  width: 100%;
-}
 .slider {
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -118,14 +66,11 @@ html {
 #calendar-container {
   margin-top: 130px;
 }
-.calendar-container {
-  margin-top: -20px;
-}
+
 .sub-header {
   height: 60px;
   background-color: #814c4c;
   margin-top: 55px;
-  /* background: linear-gradient( rgba(148, 18, 18, 0), rgba(97, 49, 49, 0), rgba(48, 35, 35, 0.8)); */
   top: 0;
   left: 0;
   right: 0;
@@ -135,6 +80,7 @@ html {
 #sub-nav li {
   display: inline-block;
 }
+
 #sub-nav li a {
   color: #270909;
   text-decoration: none;
@@ -142,6 +88,7 @@ html {
   padding: 0px 24px;
   display: inline-block;
 }
+
 #sub-nav li:hover a {
   color: #000;
   background-color: #ccc;
@@ -203,16 +150,16 @@ html {
   width: 300px;
   border-radius: 5px;
   position: absolute;
-  bottom: 0px; /* Đặt ảnh ở góc dưới */
+  bottom: 0px;
   right: 40px;
   margin-right: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
+
 .overlay {
   position: absolute;
   top: 0;
-  /* left: 100px; */
   right: 60px;
   width: 100%;
   height: 100%;
@@ -226,11 +173,12 @@ html {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .calendar-img {
-  width: 100%; /* Chiều rộng của ảnh chính */
+  width: 100%;
   border-radius: 5px;
-  position: relative; /* Để lớp phủ có thể nằm trên ảnh này */
-  z-index: 1; /* Đảm bảo ảnh nằm dưới lớp phủ */
+  position: relative;
+  z-index: 1;
 }
 
 .calendar-listing__layout {
@@ -248,22 +196,21 @@ html {
   padding: 64px 16px;
   text-align: center;
 }
+
 #footer .social-list {
   font-size: 24px;
 }
+
 #footer .social-list a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.6);
-}
-#footer .copy-right a:hover,
-#footer .social-list a:hover {
-  color: rgba(0, 0, 0, 0.4);
 }
 
 #footer .copy-right {
   margin-top: 15px;
   color: rgba(0, 0, 0, 0.4);
 }
+
 #footer .copy-right a {
   color: rgba(0, 0, 0, 0.4);
 }
