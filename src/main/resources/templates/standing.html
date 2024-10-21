@@ -121,122 +121,54 @@
                   </th>
                 </tr>
               </thead>
-              <tbody class="results-table__tbody">
-                <tr class="results-table__body-row">
+              <tbody>
+                <tr class="results-table__body-row" th:each="dto : ${points}">
                   <td
                     class="results-table__body-cell results-table__body-cell--pos"
-                    style="border-left: 4px solid rgb(130, 52, 194)"
-                  >
-                    1
-                  </td>
+                    th:text="${dto.rank}"
+                  ></td>
+
                   <td
-                    class="results-table__body-cell results-table__body-cell--rider"
+                    class="results-table__body-cell results-table__rider-details"
                   >
-                    <div class="results-table__rider-details">
-                      <div class="rider-image-container">
-                        <div class="rider-image">
-                          <img
-                            src="https://resources.motogp.pulselive.com/photo-resources/2024/03/07/2b32c79b-826b-4371-b357-3504438f4973/89-Jorge-Martin-Official-Rider_DSC9358.png?height=400&width=600"
-                            alt="ez"
-                            loading="lazy"
-                            class="img undefined picture__img"
-                          />
-                        </div>
-                      </div>
-                      <div class="results-table__rider-name-wrapper">
-                        <div class="results-table__rider-name">
-                          <span
-                            class="results-table__body-cell results-table__body-cell--number"
-                            >89</span
-                          >
-                          <span
-                            class="results-table__body-cell results-table__body-cell--full-name"
-                          >
-                            <a class="results-table__rider-link">
-                              <span class="results-table__first-name"
-                                >J. Martin</span
-                              >
-                            </a>
-                          </span>
-                        </div>
+                    <div class="rider-image-container">
+                      <img
+                        th:src="@{'/img_rider/' + ${dto.standing.rider.imgUrl}}"
+                        alt="Rider Image"
+                        class="picture__img"
+                      />
+                    </div>
+                    <div class="results-table__rider-name-wrapper">
+                      <div class="results-table__rider-name">
+                        <span
+                          class="results-table__body-cell--full-name"
+                          th:text="${dto.standing.rider.name}"
+                        ></span>
                       </div>
                     </div>
                   </td>
+
+                  <td>
+                    <img
+                      th:src="@{'/flag_svg/' + ${dto.standing.rider.country_img}}"
+                      alt="Country Flag"
+                      class="results-table__body-cell-flag"
+                    />
+                  </td>
+
                   <td
                     class="results-table__body-cell results-table__body-cell--team"
-                  >
-                    <div>
-                      <img
-                        src="https://static-files.motogp.pulselive.com/assets/flags/es.svg"
-                        alt="ES flag"
-                        class="results-table__body-cell-flag"
-                      />
-                      <span>Prima Pramac Racing</span>
-                    </div>
-                  </td>
+                    th:text="${dto.standing.rider.team.teamName}"
+                  ></td>
+
                   <td
                     class="results-table__body-cell results-table__body-cell--time"
-                  >
-                    <span>392</span>
-                  </td>
-                </tr>
-                <tr class="results-table__body-row">
+                  ></td>
+
                   <td
-                    class="results-table__body-cell results-table__body-cell--pos"
-                    style="border-left: 4px solid rgb(204, 0, 0)"
-                  >
-                    2
-                  </td>
-                  <td
-                    class="results-table__body-cell results-table__body-cell--rider"
-                  >
-                    <div class="results-table__rider-details">
-                      <div class="rider-image-container">
-                        <div class="rider-image">
-                          <img
-                            src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/3a568eee-1e12-4091-b120-f53c71cbe8f6/rider-bio_francescobagnaia.png?height=400&width=600"
-                            alt="ez"
-                            loading="lazy"
-                            class="img undefined picture__img"
-                          />
-                        </div>
-                      </div>
-                      <div class="results-table__rider-name-wrapper">
-                        <div class="results-table__rider-name">
-                          <span
-                            class="results-table__body-cell results-table__body-cell--number"
-                            >1</span
-                          >
-                          <span
-                            class="results-table__body-cell results-table__body-cell--full-name"
-                          >
-                            <a class="results-table__rider-link">
-                              <span class="results-table__first-name"
-                                >F.Bagnaia</span
-                              >
-                            </a>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td
-                    class="results-table__body-cell results-table__body-cell--team"
-                  >
-                    <div>
-                      <img
-                        src="https://static-files.motogp.pulselive.com/assets/flags/it.svg"
-                        alt="ES flag"
-                        class="results-table__body-cell-flag"
-                      />
-                      <span>Ducati Lenovo Team</span>
-                    </div>
-                  </td>
-                  <td
-                    class="results-table__body-cell results-table__body-cell--time"
-                  >
-                    <span>382</span>
-                  </td>
+                    class="results-table__body-cell results-table__body-cell--pos-points"
+                    th:text="${dto.standing.point}"
+                  ></td>
                 </tr>
               </tbody>
             </table>
